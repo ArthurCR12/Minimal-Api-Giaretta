@@ -1,3 +1,5 @@
+using Person.Routes;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,6 +13,9 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
+// Chama as rotas do PersonRoute
+app.PersonRoutes();
 
 app.UseHttpsRedirection();
 app.Run();
