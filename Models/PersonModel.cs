@@ -11,4 +11,14 @@ public class PersonModel
     // Esse init permite que a propriedade seja definida apenas durante a inicialização do objeto
     public Guid Id { get; init; }
     public string Name { get; private set; }
+
+    public void ChangeName(string name)
+    {
+        Name = name;
+    }
+
+    public void SetInactive()
+    {
+        Name = "DESATIVADO";
+    }
 }
